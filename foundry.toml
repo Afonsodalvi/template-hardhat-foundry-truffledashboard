@@ -1,6 +1,10 @@
 [default]
 src = 'src'
 out = 'out'
+ffi = false
+fuzz_runs = 256
+optimizer = true
+optimizer_runs = 1000000
 libs = ['lib']
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

@@ -2,7 +2,7 @@
 
 **Template repository for getting started quickly with Hardhat and Foundry in one project**
 
-![Github Actions](https://github.com/devanonon/hardhat-foundry-template/workflows/test/badge.svg)
+![Github Actions]()
 
 ### Getting Started
 
@@ -14,8 +14,8 @@ forge test
 
  * Use Hardhat:
 ```bash
-npm install
-npx hardhat test
+yarn
+yarn test
 ```
 
 ### Features
@@ -24,7 +24,22 @@ npx hardhat test
 ```bash
 forge test
 # or
-npx hardhat test
+yarn test
+```
+* Use Truffle Dashboard:
+```bash
+truffle dashboard
+```
+
+* Deploy your smart-contract using testnet Truffle Dashboard:
+```bash
+yarn deploy --network truffle
+```
+
+* Use compile watch or test watch:
+```bash
+yarn hardhat compile:watch
+yarn hardhat test:watch
 ```
 
  * Use Hardhat's task framework
@@ -32,11 +47,23 @@ npx hardhat test
 npx hardhat example
 ```
 
+ * Use Prettier
+```bash
+yarn prettier
+```
+
  * Install libraries with Foundry which work with Hardhat.
 ```bash
 forge install rari-capital/solmate # Already in this repo, just an example
 ```
 
+* Configured gas cost with hardhat-gas-reporter
+
+```bash
+yarn add hardhat-gas-reporter # Already in this repo, just an example
+```
+
 ### Notes
+Fiz um conjunto de implementações para ficar mais fácil o uso de diversos frameworks necessários para iniciar qualquer projeto.
 
 Whenever you install new libraries using Foundry, make sure to update your `remappings.txt` file by running `forge remappings > remappings.txt`. This is required because we use `hardhat-preprocessor` and the `remappings.txt` file to allow Hardhat to resolve libraries you install with Foundry.
